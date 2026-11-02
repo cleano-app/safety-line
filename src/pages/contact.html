@@ -1,0 +1,68 @@
+<!--meta {"title": "Contact & quotes | SafetyLine", "description": "Ask for a quote for health and safety services, safety certificates or a compliance contract.", "nav": "contact"} -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact &amp; quotes</h1>
+        <p>Tell us what you need and we'll come back to you with a quote.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid grid-2" style="gap:48px; align-items:start">
+        <form id="enquiry" class="form card" action="/api/contact" method="post" novalidate>
+          <div class="row">
+            <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="120"></div>
+            <div><label for="company">Company <span class="muted small">(optional)</span></label><input id="company" name="company" autocomplete="organization" maxlength="120"></div>
+          </div>
+          <div class="row">
+            <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+            <div><label for="phone">Phone <span class="muted small">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="service">What do you need?</label>
+              <select id="service" name="service" required>
+                <option value="">Choose one…</option>
+                <option value="certificate">Safety certificate(s)</option>
+                <option value="gas">Gas Safety Certificate (CP12)</option>
+                <option value="eicr">EICR (electrical)</option>
+                <option value="fra">Fire risk assessment</option>
+                <option value="health-safety">Health &amp; safety support</option>
+                <option value="contract">Compliance contract</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div><label for="postcode">Property postcode <span class="muted small">(optional)</span></label><input id="postcode" name="postcode" autocomplete="postal-code" maxlength="12"></div>
+          </div>
+          <div>
+            <label for="message">Details</label>
+            <textarea id="message" name="message" required maxlength="5000" placeholder="Property type, number of properties, when you need it…"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="checkbox"><input type="checkbox" name="consent" value="yes" required> <span>I agree to SafetyLine using these details to reply to my enquiry, as described in the <a href="/privacy">privacy notice</a>.</span></label>
+          <div id="form-status" class="form-status" role="status" tabindex="-1"></div>
+          <div><button class="btn btn-primary" type="submit">Send enquiry</button></div>
+        </form>
+
+        <div>
+          <h2>Other ways to reach us</h2>
+          <ul class="contact-info">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              <div><strong>Email</strong><a href="mailto:{{email}}">{{email}}</a></div>
+            </li>
+            {{#if phone}}<li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <div><strong>Phone</strong><a href="tel:{{phoneHref}}">{{phone}}</a></div>
+            </li>{{/if}}
+            {{#if area}}<li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Areas covered</strong>{{area}}</div>
+            </li>{{/if}}
+          </ul>
+          <div class="card" style="margin-top:28px">
+            <h3>Need several certificates?</h3>
+            <p>Choose "Compliance contract" and tell us how many properties you have. We'll put together one price for the year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
