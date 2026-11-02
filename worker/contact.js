@@ -9,6 +9,8 @@ const SERVICES = {
   gas: "Gas Safety Certificate (CP12)",
   eicr: "EICR (electrical)",
   fra: "Fire risk assessment",
+  "new-build": "New build / conversion completion documents",
+  schools: "School, nursery or playgroup support",
   "health-safety": "Health & safety support",
   contract: "Compliance contract",
   other: "Something else",

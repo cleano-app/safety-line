@@ -177,3 +177,16 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .site-footer .brand { color: #fff; margin-bottom: 12px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 40px; padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+
+/* Phones: tables become stacked cards instead of scrolling sideways */
+@media (max-width: 600px) {
+  table.stack { min-width: 0; }
+  table.stack thead { display: none; }
+  table.stack tr { display: block; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  table.stack tr:last-child { border-bottom: 0; }
+  table.stack td { display: block; padding: 0; border: 0; }
+  table.stack td + td { margin-top: 6px; color: var(--muted); }
+  table.stack td:first-child { color: var(--navy); }
+  table.stack.often td:nth-child(2) { color: var(--ink); font-weight: 600; font-size: .95rem; }
+  table.stack.often td:nth-child(2)::before { content: "How often: "; font-weight: 400; color: var(--muted); }
+}
