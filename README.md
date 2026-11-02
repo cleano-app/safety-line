@@ -1,7 +1,7 @@
 # SafetyLine website — safetyline.uk
 
 Static site for SafetyLine (health & safety, certificates, compliance contracts),
-hosted on Cloudflare Pages. No framework and no dependencies.
+hosted as a Cloudflare Worker with static assets. No framework and no dependencies.
 
 ## Layout
 
@@ -11,22 +11,26 @@ hosted on Cloudflare Pages. No framework and no dependencies.
 | `src/pages/*.html` | Page content. Each starts with a `<!--meta {...} -->` line holding its title and description. |
 | `src/partials/` | Shared layout, header and footer. |
 | `public/` | Copied as-is: CSS, JS, favicon, `robots.txt`, `_headers` (security headers). |
-| `functions/api/contact.js` | Cloudflare Pages Function behind the enquiry form; emails each enquiry via Resend. |
+| `worker/index.js` | Worker entry: `/api/*` runs code, everything else is served from `dist/`. |
+| `worker/contact.js` | `POST /api/contact` behind the enquiry form; emails each enquiry via Resend. |
+| `wrangler.jsonc` | Worker config (name `safety-line`, assets from `dist/`). |
 | `build.mjs` | Builds everything into `dist/` and writes `sitemap.xml`. |
 
 ```
 node build.mjs     # -> dist/
 ```
 
-## Cloudflare Pages setup
+## Deploying
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git** → `cleano-app/safety-line`.
-2. Build command: `node build.mjs` · Build output directory: `dist` · Production branch: `main`.
-3. **Custom domains** → add `safetyline.uk` (and `www.safetyline.uk`).
+The `safety-line` Worker in Cloudflare is connected to this repo (Workers Builds):
+every push to `main` runs `npm run build` then `npx wrangler deploy`.
+
+Custom domain: Worker → **Settings → Domains & Routes → Add → Custom domain** → `safetyline.uk`
+(and `www.safetyline.uk`).
 
 ## Enquiry form
 
-Set these under the Pages project → **Settings → Variables and Secrets**, then redeploy:
+Set these under the Worker → **Settings → Variables and Secrets** (runtime, not build variables):
 
 | Name | Example |
 |---|---|

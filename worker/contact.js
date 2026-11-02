@@ -1,6 +1,5 @@
-// Cloudflare Pages Function: POST /api/contact
-// Emails each enquiry to you via Resend (https://resend.com, free tier).
-// Set these in Cloudflare Pages > Settings > Variables and Secrets:
+// POST /api/contact: emails each enquiry to you via Resend (https://resend.com, free tier).
+// Set these in the Worker's Settings > Variables and Secrets:
 //   RESEND_API_KEY  (secret)  e.g. re_xxx
 //   CONTACT_TO                where enquiries go, e.g. info@safetyline.uk
 //   CONTACT_FROM              a sender on a domain verified in Resend, e.g. "SafetyLine website <website@safetyline.uk>"
@@ -20,7 +19,7 @@ const EMAIL_RE = /^[^\s@<>()",;]+@[^\s@<>()",;]+\.[^\s@<>()",;]+$/;
 
 const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-export async function onRequestPost({ request, env }) {
+export async function handleContact(request, env) {
   const wantsJson = (request.headers.get("Accept") || "").includes("application/json");
   const reply = (status, ok, error) =>
     wantsJson
