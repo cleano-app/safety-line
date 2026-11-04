@@ -8,7 +8,7 @@ const SERVICES = {
   registration: "Registration (Ofsted / DfE / local authority)",
   inspection: "Mock inspection / inspection support",
   schools: "School compliance",
-  training: "Safeguarding or first aid training",
+  training: "Safeguarding, first aid or allergy training",
   property: "Property compliance / council report",
   certificate: "Safety certificate(s)",
   "new-build": "New build / conversion completion documents",
