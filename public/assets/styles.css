@@ -92,6 +92,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 56px 0; } }
 .hero h1 { max-width: 16ch; }
 .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 54ch; }
+.hero p.strapline { font-size: 1.15rem; font-weight: 600; color: var(--ink); margin: 0; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 
 /* Example tracker panel */
