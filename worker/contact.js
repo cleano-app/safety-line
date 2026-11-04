@@ -5,15 +5,24 @@
 //   CONTACT_FROM              a sender on a domain verified in Resend, e.g. "SafetyLine website <website@safetyline.uk>"
 
 const SERVICES = {
+  registration: "Registration (Ofsted / DfE / local authority)",
+  inspection: "Mock inspection / inspection support",
+  schools: "School compliance",
+  training: "Safeguarding or first aid training",
+  property: "Property compliance / council report",
   certificate: "Safety certificate(s)",
+  "new-build": "New build / conversion completion documents",
+  "risk-assessment": "Workplace risk assessment",
+  business: "Business compliance / high-risk work",
+  contracts: "Contracts & safe working procedures",
+  plan: "Monthly or yearly compliance plan",
+  other: "Something else",
+  // older links
   gas: "Gas Safety Certificate (CP12)",
   eicr: "EICR (electrical)",
   fra: "Fire risk assessment",
-  "new-build": "New build / conversion completion documents",
-  schools: "School, nursery or playgroup support",
   "health-safety": "Health & safety support",
-  contract: "Compliance contract",
-  other: "Something else",
+  contract: "Compliance plan",
 };
 
 const LIMITS = { name: 120, company: 120, email: 200, phone: 40, postcode: 12, message: 5000 };

@@ -22,14 +22,23 @@
               <label for="service">What do you need?</label>
               <select id="service" name="service" required>
                 <option value="">Choose one…</option>
-                <option value="certificate">Safety certificate(s)</option>
-                <option value="gas">Gas Safety Certificate (CP12)</option>
-                <option value="eicr">EICR (electrical)</option>
-                <option value="fra">Fire risk assessment</option>
-                <option value="new-build">New build / conversion completion documents</option>
-                <option value="schools">School, nursery or playgroup support</option>
-                <option value="health-safety">Health &amp; safety support</option>
-                <option value="contract">Compliance contract</option>
+                <optgroup label="Schools, nurseries &amp; playgroups">
+                  <option value="registration">Registration (Ofsted / DfE / local authority)</option>
+                  <option value="inspection">Mock inspection / inspection support</option>
+                  <option value="schools">School compliance (SCR, safer recruitment, H&amp;S)</option>
+                  <option value="training">Safeguarding or first aid training</option>
+                </optgroup>
+                <optgroup label="Property">
+                  <option value="property">Property compliance / council report</option>
+                  <option value="certificate">Safety certificate(s)</option>
+                  <option value="new-build">New build / conversion completion documents</option>
+                </optgroup>
+                <optgroup label="Business">
+                  <option value="risk-assessment">Workplace risk assessment</option>
+                  <option value="business">Business compliance / high-risk work</option>
+                  <option value="contracts">Contracts &amp; safe working procedures</option>
+                </optgroup>
+                <option value="plan">Monthly or yearly compliance plan</option>
                 <option value="other">Something else</option>
               </select>
             </div>
@@ -37,7 +46,7 @@
           </div>
           <div>
             <label for="message">Details</label>
-            <textarea id="message" name="message" required maxlength="5000" placeholder="Property type, number of properties, when you need it…"></textarea>
+            <textarea id="message" name="message" required maxlength="5000" placeholder="Type of setting, property or business, what you need and when…"></textarea>
           </div>
           <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
           <label class="checkbox"><input type="checkbox" name="consent" value="yes" required> <span>I agree to SafetyLine using these details to reply to my enquiry, as described in the <a href="/privacy">privacy notice</a>.</span></label>
@@ -62,8 +71,8 @@
             </li>{{/if}}
           </ul>
           <div class="card" style="margin-top:28px">
-            <h3>Need several certificates?</h3>
-            <p>Choose "Compliance contract" and tell us how many properties you have. We'll put together one price for the year.</p>
+            <h3>Inspection coming up?</h3>
+            <p>Choose "Mock inspection / inspection support" and tell us the date. The sooner we know, the more we can put right before the day.</p>
           </div>
         </div>
       </div>

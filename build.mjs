@@ -37,7 +37,7 @@ for (const file of readdirSync(join(root, "src/pages")).filter((f) => f.endsWith
     canonical: `${cfg.domain}/${slug}`,
     ["nav_" + (meta.nav || "none")]: ' aria-current="page"',
   };
-  for (const n of ["home", "services", "certificates", "about", "contact"]) vars["nav_" + n] ??= "";
+  for (const n of ["home", "schools", "property", "business", "certificates", "about", "contact"]) vars["nav_" + n] ??= "";
   const body = fill(raw.slice(m[0].length), vars);
   const html = fill(layout, { ...vars, header: fill(header, vars), footer: fill(footer, vars), body });
   writeFileSync(join(out, file), html);
