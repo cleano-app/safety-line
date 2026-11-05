@@ -351,3 +351,14 @@ details p { margin: 12px 0 0; color: var(--muted); }
   .mobile-cta { transform: translateY(140%); transition: transform .3s; }
   .mobile-cta.show { transform: none; }
 }
+
+/* Abstract brand shapes instead of pictures */
+.hero-photo .frame { background: none; box-shadow: none; border-radius: 0; overflow: visible; }
+.hero-photo .badge { top: 46%; left: 6%; }
+.hero-photo .badge.b2 { top: auto; bottom: 8%; right: 4%; left: auto; }
+.split .photo { background-size: cover; box-shadow: none; }
+.media-card .media img, .page-hero.has-art .art img { object-fit: cover; }
+.page-hero.has-art .art { box-shadow: none; }
+@media (max-width: 600px) { .hero-photo { max-width: 340px; margin: 0 auto; } }
+.hero-photo .badge { top: 40%; left: 0; }
+.hero-photo .badge.b2 { bottom: 4%; right: 0; }
