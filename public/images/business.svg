@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img" aria-label="Illustration of business premises with a risk assessment, a signed contract and first aid kit">
+  <style>
+    .doc{animation:bob 5s ease-in-out infinite}
+    .sig{stroke-dasharray:140;stroke-dashoffset:140;animation:sign 6s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes sign{0%,20%{stroke-dashoffset:140}50%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:140}}
+    @media (prefers-reduced-motion:reduce){.doc,.sig{animation:none;stroke-dashoffset:0}}
+  </style>
+  <rect width="560" height="400" rx="18" fill="#f4eef6"/>
+  <path d="M0 400V290c80-30 170-30 260 0s180 20 300-20v130z" fill="#ece2f0"/>
+  <!-- shopfront / premises -->
+  <g fill="none" stroke="#4b145b" stroke-width="3" stroke-linejoin="round">
+    <rect x="40" y="110" width="250" height="240" fill="#ffffff"/>
+    <path d="M30 110h270l-16-46H46z" fill="#ffffff"/>
+    <path d="M30 110c0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0 0 18 22 18 22 0"/>
+    <rect x="62" y="160" width="120" height="110" rx="4"/>
+    <rect x="204" y="200" width="64" height="150" rx="3"/>
+    <path d="M20 350h520"/>
+  </g>
+  <rect x="96" y="76" width="140" height="18" rx="9" fill="#4b145b"/>
+  <!-- first aid box -->
+  <rect x="80" y="218" width="44" height="34" rx="6" fill="#1f8a4c"/>
+  <path d="M102 226v18M93 235h18" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <!-- extinguisher by the door -->
+  <rect x="276" y="300" width="16" height="44" rx="7" fill="#ff7900"/><rect x="279" y="292" width="10" height="9" rx="2" fill="#4b145b"/>
+  <!-- documents -->
+  <g class="doc">
+    <rect x="330" y="80" width="180" height="240" rx="12" fill="#ffffff" stroke="#4b145b" stroke-width="3"/>
+    <rect x="350" y="102" width="100" height="10" rx="5" fill="#4b145b"/>
+    <g fill="#e2d6e8"><rect x="350" y="132" width="140" height="8" rx="4"/><rect x="350" y="150" width="120" height="8" rx="4"/><rect x="350" y="168" width="134" height="8" rx="4"/><rect x="350" y="186" width="90" height="8" rx="4"/></g>
+    <g fill="#ff7900"><rect x="350" y="214" width="44" height="10" rx="5"/></g>
+    <path class="sig" d="M352 272c14-20 22 14 34-4s16 10 28-2 14 8 30-6" fill="none" stroke="#4b145b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M350 290h120" stroke="#d8cde0" stroke-width="2"/>
+  </g>
+</svg>

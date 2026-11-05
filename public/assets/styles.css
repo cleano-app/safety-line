@@ -327,3 +327,27 @@ details p { margin: 12px 0 0; color: var(--muted); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Mobile polish ---------- */
+.hero-photo .frame { aspect-ratio: 560 / 460; background: var(--purple-tint); }
+.hero-photo .frame img, .media-card .media img, .page-hero.has-art .art img { object-fit: contain; }
+.media-card .media, .page-hero.has-art .art { background: var(--purple-tint); }
+.split .photo { background-size: contain; background-repeat: no-repeat; background-color: var(--purple-tint); }
+@media (max-width: 600px) {
+  .hero-photo .badge { display: none; }
+  .hero h1 { font-size: 2.35rem; }
+  .eyebrow { font-size: .72rem; letter-spacing: .12em; }
+  .media-card .body { padding: 22px 20px; }
+  .timeline { grid-template-columns: 1fr; padding-top: 0; padding-left: 30px; row-gap: 22px; }
+  .timeline::before, .timeline::after { top: 0; left: 6px; width: 2px; height: 100%; }
+  .js .timeline:not(.in)::after { width: 2px; height: 0; }
+  .timeline::after { transition: height 1.6s cubic-bezier(.2,.7,.2,1); }
+  .timeline .t::before { top: 4px; left: -31px; }
+  .split .photo { min-height: 220px; }
+  .cta { padding: 48px 0; }
+}
+/* sticky phone button appears only after the hero */
+@media (max-width: 700px) {
+  .mobile-cta { transform: translateY(140%); transition: transform .3s; }
+  .mobile-cta.show { transform: none; }
+}

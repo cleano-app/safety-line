@@ -74,3 +74,11 @@ function countUp(el) {
   };
   requestAnimationFrame(tick);
 }
+
+// Sticky phone button: show once the first screen has been scrolled past
+const mcta = document.querySelector(".mobile-cta");
+if (mcta) {
+  const onScroll = () => mcta.classList.toggle("show", window.scrollY > window.innerHeight * 0.8);
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}

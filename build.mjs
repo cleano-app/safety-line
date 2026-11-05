@@ -3,6 +3,7 @@
 // Each page starts with a JSON comment:  <!--meta {"title": "...", "description": "...", "nav": "home"} -->
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, cpSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import { createHash } from "node:crypto";
 
 const root = new URL(".", import.meta.url).pathname;
 const out = join(root, "dist");
@@ -10,7 +11,12 @@ const cfg = JSON.parse(readFileSync(join(root, "site.config.json"), "utf8"));
 cfg.year = String(new Date().getFullYear());
 
 const read = (p) => readFileSync(join(root, p), "utf8");
-const layout = read("src/partials/layout.html");
+// Cache-busting: every change to the CSS/JS gives it a new URL, so browsers
+// never keep showing an old design.
+const ver = (f) => createHash("sha256").update(readFileSync(join(root, "public", f))).digest("hex").slice(0, 10);
+const layout = read("src/partials/layout.html")
+  .replace("/assets/styles.css", `/assets/styles.css?v=${ver("assets/styles.css")}`)
+  .replace("/assets/main.js", `/assets/main.js?v=${ver("assets/main.js")}`);
 const header = read("src/partials/header.html");
 const footer = read("src/partials/footer.html");
 
