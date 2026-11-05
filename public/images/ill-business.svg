@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of a workplace risk assessment and a signed contract">
+  <style>
+    text{font-family:Inter,Segoe UI,Arial,sans-serif}
+    .sig{stroke-dasharray:130;stroke-dashoffset:130;animation:s 7s ease-in-out infinite}
+    @keyframes s{0%,20%{stroke-dashoffset:130}50%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:130}}
+    @media (prefers-reduced-motion:reduce){.sig{animation:none;stroke-dashoffset:0}}
+  </style>
+  <rect width="480" height="300" fill="#f6f3f8"/>
+  <g transform="translate(34 30)">
+    <rect width="230" height="240" rx="12" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
+    <text x="20" y="32" font-size="13" font-weight="700" fill="#4b145b">Risk assessment</text>
+    <g font-size="8.5" font-weight="600" fill="#8a7f93" letter-spacing=".06em"><text x="20" y="60">HAZARD</text><text x="128" y="60">RISK</text><text x="172" y="60">ACTION</text></g>
+    <path d="M20 68h190" stroke="#ece6f0" stroke-width="2"/>
+    <g fill="#d9d0df"><rect x="20" y="86" width="86" height="7" rx="3.5"/><rect x="20" y="122" width="72" height="7" rx="3.5"/><rect x="20" y="158" width="94" height="7" rx="3.5"/><rect x="20" y="194" width="78" height="7" rx="3.5"/></g>
+    <rect x="128" y="82" width="30" height="14" rx="7" fill="#ff7900"/><rect x="128" y="118" width="30" height="14" rx="7" fill="#ffb26b"/><rect x="128" y="154" width="30" height="14" rx="7" fill="#f3d9c4"/><rect x="128" y="190" width="30" height="14" rx="7" fill="#efe7f2"/>
+    <g fill="#eee9f1"><rect x="172" y="86" width="38" height="7" rx="3.5"/><rect x="172" y="122" width="30" height="7" rx="3.5"/><rect x="172" y="158" width="36" height="7" rx="3.5"/><rect x="172" y="194" width="26" height="7" rx="3.5"/></g>
+    <g fill="none" stroke="#ece6f0" stroke-width="1.5"><path d="M20 106h190M20 142h190M20 178h190"/></g>
+  </g>
+  <g transform="translate(244 58) rotate(3)">
+    <rect width="200" height="214" rx="12" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
+    <text x="20" y="32" font-size="13" font-weight="700" fill="#4b145b">Contract</text>
+    <g fill="#d9d0df"><rect x="20" y="52" width="160" height="6" rx="3"/><rect x="20" y="66" width="140" height="6" rx="3"/><rect x="20" y="80" width="152" height="6" rx="3"/><rect x="20" y="94" width="120" height="6" rx="3"/></g>
+    <g fill="#eee9f1"><rect x="20" y="114" width="150" height="6" rx="3"/><rect x="20" y="128" width="132" height="6" rx="3"/></g>
+    <path class="sig" d="M24 176c12-18 20 12 30-4s14 10 26-2 12 8 26-6" fill="none" stroke="#4b145b" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M20 188h110" stroke="#c9bfd1" stroke-width="1.5"/>
+    <rect x="140" y="166" width="42" height="24" rx="6" fill="#fff3e8" stroke="#ff7900" stroke-width="1.5"/>
+    <path d="M151 178l5 5 9-10" fill="none" stroke="#ff7900" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
