@@ -1,29 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of certificates and an expiry tracker">
-  <style>
-    text{font-family:Inter,Segoe UI,Arial,sans-serif}
-    .bar{transform-box:fill-box;transform-origin:left center;animation:g 6s ease-in-out infinite}
-    @keyframes g{0%{transform:scaleX(.3)}40%,100%{transform:scaleX(1)}}
-    @media (prefers-reduced-motion:reduce){.bar{animation:none}}
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Gas safety record and a certificate expiry tracker">
   <rect width="480" height="300" fill="#f6f3f8"/>
-  <g transform="translate(40 52) rotate(-5)"><rect width="170" height="200" rx="10" fill="#fff" stroke="#e2dbe7" stroke-width="2"/></g>
-  <g transform="translate(56 40)">
-    <rect width="176" height="214" rx="10" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
-    <text x="88" y="38" font-size="12" font-weight="700" fill="#4b145b" text-anchor="middle">CERTIFICATE</text>
-    <rect x="48" y="48" width="80" height="4" rx="2" fill="#ff7900"/>
-    <g fill="#d9d0df"><rect x="26" y="72" width="124" height="6" rx="3"/><rect x="36" y="86" width="104" height="6" rx="3"/><rect x="30" y="100" width="116" height="6" rx="3"/></g>
-    <circle cx="88" cy="150" r="22" fill="none" stroke="#4b145b" stroke-width="2.5"/>
-    <circle cx="88" cy="150" r="14" fill="none" stroke="#ff7900" stroke-width="2" stroke-dasharray="3 3"/>
-    <path d="M30 196h44M102 196h44" stroke="#4b145b" stroke-width="1.8" stroke-linecap="round"/>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <g transform="translate(24 26)">
+    <rect width="200" height="248" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <rect width="200" height="44" rx="12" fill="#4b145b"/><rect y="30" width="200" height="14" fill="#4b145b"/>
+    <text x="18" y="28" font-size="12.5" font-weight="700" fill="#fff">Gas Safety Record</text>
+    <g font-size="9.5" fill="#8a7f93"><text x="18" y="72">Property</text><text x="18" y="106">Engineer</text><text x="18" y="140">Appliances checked</text><text x="18" y="174">Next check due</text></g>
+    <g fill="#e6e0ea"><rect x="18" y="80" width="140" height="7" rx="3.5"/><rect x="18" y="114" width="110" height="7" rx="3.5"/></g>
+    <text x="18" y="156" font-size="11.5" fill="#2b2433">Boiler · Hob · Fire</text>
+    <text x="18" y="190" font-size="11.5" font-weight="600" fill="#4b145b">12 months</text>
+    <rect x="18" y="210" width="74" height="22" rx="11" fill="#fff1e3"/><text x="55" y="225" font-size="10" font-weight="700" fill="#e56c00" text-anchor="middle">PASS</text>
   </g>
-  <g transform="translate(256 70)">
-    <rect width="196" height="164" rx="12" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
-    <text x="18" y="30" font-size="12" font-weight="700" fill="#4b145b">Expiry tracker</text>
-    <g font-size="9.5" fill="#6b6474"><text x="18" y="60">Gas safety</text><text x="18" y="94">EICR</text><text x="18" y="128">Fire alarm</text></g>
-    <g fill="#efe7f2"><rect x="106" y="52" width="72" height="8" rx="4"/><rect x="106" y="86" width="72" height="8" rx="4"/><rect x="106" y="120" width="72" height="8" rx="4"/></g>
-    <rect class="bar" x="106" y="52" width="60" height="8" rx="4" fill="#4b145b"/>
-    <rect class="bar" x="106" y="86" width="30" height="8" rx="4" fill="#4b145b"/>
-    <rect class="bar" x="106" y="120" width="70" height="8" rx="4" fill="#ff7900"/>
-    <text x="178" y="148" font-size="8.5" font-weight="700" fill="#e56c00" text-anchor="end">RENEWAL BOOKED</text>
+  <g transform="translate(240 46)">
+    <rect width="216" height="208" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <text x="18" y="32" font-size="14" font-weight="700" fill="#4b145b">Expiry tracker</text>
+    <g font-size="9.5" font-weight="600" fill="#8a7f93" letter-spacing=".05em"><text x="18" y="60">CERTIFICATE</text><text x="198" y="60" text-anchor="end">STATUS</text></g>
+    <path d="M18 68h180" stroke="#ece6f0" stroke-width="1.5"/>
+    <g font-size="11.5" fill="#2b2433"><text x="18" y="94">Gas safety</text><text x="18" y="126">EICR</text><text x="18" y="158">Fire alarm</text><text x="18" y="190">PAT testing</text></g>
+    <g font-size="9.5" font-weight="600" text-anchor="middle">
+      <rect x="132" y="81" width="66" height="18" rx="9" fill="#f1ebf4"/><text x="165" y="94" fill="#4b145b">Valid</text>
+      <rect x="132" y="113" width="66" height="18" rx="9" fill="#f1ebf4"/><text x="165" y="126" fill="#4b145b">Valid</text>
+      <rect x="132" y="145" width="66" height="18" rx="9" fill="#fff1e3"/><text x="165" y="158" fill="#e56c00">Due soon</text>
+      <rect x="132" y="177" width="66" height="18" rx="9" fill="#f1ebf4"/><text x="165" y="190" fill="#4b145b">Booked</text>
+    </g>
+  </g>
   </g>
 </svg>

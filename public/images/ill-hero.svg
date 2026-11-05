@@ -1,53 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" role="img" aria-label="Illustration of a compliance audit report with a risk matrix and a renewals calendar">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" role="img" aria-label="Compliance audit checklist, risk matrix and upcoming renewals">
   <style>
-    text{font-family:Inter,Segoe UI,Arial,sans-serif}
-    .k{stroke-dasharray:24;stroke-dashoffset:24;animation:k 9s infinite}
-    .k2{animation-delay:.5s}.k3{animation-delay:1s}.k4{animation-delay:1.5s}
-    .pulse{transform-origin:433px 341px;animation:p 3s ease-in-out infinite}
-    @keyframes k{0%,6%{stroke-dashoffset:24}14%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:24}}
-    @keyframes p{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-    @media (prefers-reduced-motion:reduce){.k{animation:none;stroke-dashoffset:0}.pulse{animation:none}}
+    .k{stroke-dasharray:24;stroke-dashoffset:24;animation:k 10s infinite}.k2{animation-delay:.5s}.k3{animation-delay:1s}.k4{animation-delay:1.5s}
+    @keyframes k{0%,5%{stroke-dashoffset:24}12%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:24}}
+    @media (prefers-reduced-motion:reduce){.k{animation:none;stroke-dashoffset:0}}
   </style>
   <rect width="560" height="460" rx="16" fill="#f6f3f8"/>
-  <!-- risk matrix card (back right) -->
-  <g transform="translate(330 56)">
-    <rect width="196" height="180" rx="12" fill="#fff" stroke="#e2dbe7" stroke-width="2"/>
-    <text x="20" y="32" font-size="13" font-weight="700" fill="#4b145b">Risk matrix</text>
-    <g transform="translate(20 46)">
-      <rect x="0" y="0" width="36" height="26" rx="4" fill="#f3d9c4"/><rect x="40" y="0" width="36" height="26" rx="4" fill="#ffb26b"/><rect x="80" y="0" width="36" height="26" rx="4" fill="#ff8f2e"/><rect x="120" y="0" width="36" height="26" rx="4" fill="#ff7900"/>
-      <rect x="0" y="30" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="40" y="30" width="36" height="26" rx="4" fill="#f3d9c4"/><rect x="80" y="30" width="36" height="26" rx="4" fill="#ffb26b"/><rect x="120" y="30" width="36" height="26" rx="4" fill="#ff8f2e"/>
-      <rect x="0" y="60" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="40" y="60" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="80" y="60" width="36" height="26" rx="4" fill="#f3d9c4"/><rect x="120" y="60" width="36" height="26" rx="4" fill="#ffb26b"/>
-      <rect x="0" y="90" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="40" y="90" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="80" y="90" width="36" height="26" rx="4" fill="#efe7f2"/><rect x="120" y="90" width="36" height="26" rx="4" fill="#f3d9c4"/>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <!-- audit -->
+  <g transform="translate(32 40)">
+    <rect width="262" height="380" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <text x="22" y="38" font-size="16" font-weight="700" fill="#4b145b">Compliance audit</text>
+    <text x="22" y="58" font-size="11" fill="#8a7f93">Site visit · 4 of 4 complete</text>
+    <path d="M22 74h218" stroke="#ece6f0" stroke-width="1.5"/>
+    <g font-size="12.5" fill="#2b2433">
+      <text x="54" y="108">Fire risk assessment</text>
+      <text x="54" y="164">Gas safety certificate</text>
+      <text x="54" y="220">Single Central Record</text>
+      <text x="54" y="276">First aid training</text>
     </g>
+    <g font-size="10.5" fill="#8a7f93">
+      <text x="54" y="126">Reviewed, actions closed</text>
+      <text x="54" y="182">Valid to March</text>
+      <text x="54" y="238">All staff checks verified</text>
+      <text x="54" y="294">2 staff booked</text>
+    </g>
+    <g fill="none" stroke="#4b145b" stroke-width="1.6"><rect x="22" y="96" width="20" height="20" rx="4"/><rect x="22" y="152" width="20" height="20" rx="4"/><rect x="22" y="208" width="20" height="20" rx="4"/><rect x="22" y="264" width="20" height="20" rx="4"/></g>
+    <g fill="none" stroke="#ff7900" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path class="k" d="M26 106l5 5 8-9"/><path class="k k2" d="M26 162l5 5 8-9"/><path class="k k3" d="M26 218l5 5 8-9"/><path class="k k4" d="M26 274l5 5 8-9"/>
+    </g>
+    <path d="M22 322h218" stroke="#ece6f0" stroke-width="1.5"/>
+    <text x="22" y="350" font-size="10.5" fill="#8a7f93">Assessor</text>
+    <path d="M80 348c8-12 13 5 20-3s10 5 18-2" fill="none" stroke="#4b145b" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="240" y="350" font-size="10.5" font-weight="600" fill="#4b145b" text-anchor="end">Compliant</text>
   </g>
-  <!-- calendar card (front left) -->
-  <g transform="translate(330 266)">
-    <rect width="196" height="140" rx="12" fill="#fff" stroke="#e2dbe7" stroke-width="2"/>
-    <rect width="196" height="30" rx="12" fill="#4b145b"/><rect y="18" width="196" height="12" fill="#4b145b"/>
-    <text x="16" y="20" font-size="11" font-weight="600" fill="#fff" letter-spacing=".08em">RENEWALS</text>
-    <g fill="#e6e0ea">
-      <rect x="16" y="44" width="18" height="14" rx="3"/><rect x="42" y="44" width="18" height="14" rx="3"/><rect x="68" y="44" width="18" height="14" rx="3"/><rect x="94" y="44" width="18" height="14" rx="3"/><rect x="120" y="44" width="18" height="14" rx="3"/><rect x="146" y="44" width="18" height="14" rx="3"/>
-      <rect x="16" y="68" width="18" height="14" rx="3"/><rect x="42" y="68" width="18" height="14" rx="3"/><rect x="68" y="68" width="18" height="14" rx="3"/><rect x="120" y="68" width="18" height="14" rx="3"/><rect x="146" y="68" width="18" height="14" rx="3"/>
-      <rect x="16" y="92" width="18" height="14" rx="3"/><rect x="42" y="92" width="18" height="14" rx="3"/><rect x="68" y="92" width="18" height="14" rx="3"/><rect x="94" y="92" width="18" height="14" rx="3"/><rect x="120" y="92" width="18" height="14" rx="3"/>
+  <!-- risk matrix -->
+  <g transform="translate(316 40)">
+    <rect width="212" height="200" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <text x="20" y="34" font-size="14" font-weight="700" fill="#4b145b">Risk matrix</text>
+    <g transform="translate(40 50)">
+      <rect x="0" y="0" width="36" height="28" rx="3" fill="#ffd9b8"/><rect x="40" y="0" width="36" height="28" rx="3" fill="#ffb26b"/><rect x="80" y="0" width="36" height="28" rx="3" fill="#ff8f2e"/><rect x="120" y="0" width="36" height="28" rx="3" fill="#ff7900"/>
+      <rect x="0" y="32" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="40" y="32" width="36" height="28" rx="3" fill="#ffd9b8"/><rect x="80" y="32" width="36" height="28" rx="3" fill="#ffb26b"/><rect x="120" y="32" width="36" height="28" rx="3" fill="#ff8f2e"/>
+      <rect x="0" y="64" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="40" y="64" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="80" y="64" width="36" height="28" rx="3" fill="#ffd9b8"/><rect x="120" y="64" width="36" height="28" rx="3" fill="#ffb26b"/>
+      <rect x="0" y="96" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="40" y="96" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="80" y="96" width="36" height="28" rx="3" fill="#f1ebf4"/><rect x="120" y="96" width="36" height="28" rx="3" fill="#ffd9b8"/>
+      <circle cx="98" cy="78" r="6" fill="#4b145b"/>
     </g>
-    <rect x="94" y="68" width="18" height="14" rx="3" fill="#ff7900"/>
-    <circle class="pulse" cx="103" cy="75" r="15" fill="none" stroke="#ff7900" stroke-width="2"/>
+    <text x="118" y="190" font-size="10" fill="#8a7f93" text-anchor="middle">Likelihood</text>
+    <text x="26" y="112" font-size="10" fill="#8a7f93" text-anchor="middle" transform="rotate(-90 26 112)">Impact</text>
   </g>
-  <!-- audit report (main) -->
-  <g transform="translate(40 70)">
-    <rect width="250" height="320" rx="14" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
-    <text x="24" y="40" font-size="15" font-weight="700" fill="#4b145b">Compliance audit</text>
-    <rect x="24" y="52" width="80" height="6" rx="3" fill="#e6e0ea"/>
-    <path d="M24 76h202" stroke="#ece6f0" stroke-width="2"/>
-    <g fill="none" stroke="#4b145b" stroke-width="2">
-      <rect x="24" y="98" width="20" height="20" rx="4"/><rect x="24" y="146" width="20" height="20" rx="4"/><rect x="24" y="194" width="20" height="20" rx="4"/><rect x="24" y="242" width="20" height="20" rx="4"/>
-    </g>
-    <g fill="none" stroke="#ff7900" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path class="k" d="M28 108l5 5 8-9"/><path class="k k2" d="M28 156l5 5 8-9"/><path class="k k3" d="M28 204l5 5 8-9"/><path class="k k4" d="M28 252l5 5 8-9"/>
-    </g>
-    <g fill="#d9d0df"><rect x="58" y="101" width="130" height="7" rx="3.5"/><rect x="58" y="149" width="110" height="7" rx="3.5"/><rect x="58" y="197" width="124" height="7" rx="3.5"/><rect x="58" y="245" width="96" height="7" rx="3.5"/></g>
-    <g fill="#eee9f1"><rect x="58" y="113" width="80" height="5" rx="2.5"/><rect x="58" y="161" width="92" height="5" rx="2.5"/><rect x="58" y="209" width="70" height="5" rx="2.5"/><rect x="58" y="257" width="84" height="5" rx="2.5"/></g>
-    <path d="M24 290h90" stroke="#4b145b" stroke-width="2" stroke-linecap="round"/>
-    <path d="M140 292c10-12 16 6 24-4s12 6 22-2" fill="none" stroke="#4b145b" stroke-width="2" stroke-linecap="round"/>
+  <!-- renewals -->
+  <g transform="translate(316 258)">
+    <rect width="212" height="162" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#4b145b">Upcoming renewals</text>
+    <g font-size="11.5" fill="#2b2433"><text x="20" y="66">EICR</text><text x="20" y="100">Fire alarm service</text><text x="20" y="134">Legionella review</text></g>
+    <rect x="132" y="54" width="62" height="18" rx="9" fill="#fff1e3"/><text x="163" y="67" font-size="10" font-weight="600" fill="#e56c00" text-anchor="middle">14 days</text>
+    <rect x="132" y="88" width="62" height="18" rx="9" fill="#f1ebf4"/><text x="163" y="101" font-size="10" font-weight="600" fill="#4b145b" text-anchor="middle">Booked</text>
+    <rect x="132" y="122" width="62" height="18" rx="9" fill="#f1ebf4"/><text x="163" y="135" font-size="10" font-weight="600" fill="#4b145b" text-anchor="middle">2 months</text>
+  </g>
   </g>
 </svg>

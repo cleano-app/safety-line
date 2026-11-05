@@ -1,26 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of a training presentation and an attendance register">
-  <style>
-    text{font-family:Inter,Segoe UI,Arial,sans-serif}
-    .sg{stroke-dasharray:60;stroke-dashoffset:60;animation:s 8s infinite}.s2{animation-delay:.6s}.s3{animation-delay:1.2s}
-    @keyframes s{0%,8%{stroke-dashoffset:60}22%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:60}}
-    @media (prefers-reduced-motion:reduce){.sg{animation:none;stroke-dashoffset:0}}
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Safeguarding training course outline and a signed attendance register">
+  <style>.k{stroke-dasharray:20;stroke-dashoffset:20;animation:k 10s infinite}.k2{animation-delay:.4s}.k3{animation-delay:.8s}.k4{animation-delay:1.2s}@keyframes k{0%,5%{stroke-dashoffset:20}12%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:20}}@media (prefers-reduced-motion:reduce){.k{animation:none;stroke-dashoffset:0}}</style>
   <rect width="480" height="300" fill="#f6f3f8"/>
-  <g transform="translate(30 36)">
-    <rect width="260" height="168" rx="12" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
-    <text x="20" y="34" font-size="13" font-weight="700" fill="#4b145b">Safeguarding training</text>
-    <g fill="#d9d0df"><rect x="20" y="56" width="120" height="7" rx="3.5"/><rect x="20" y="74" width="100" height="7" rx="3.5"/><rect x="20" y="92" width="112" height="7" rx="3.5"/></g>
-    <g transform="translate(160 54)"><rect x="0" y="40" width="16" height="40" rx="3" fill="#e2d6e8"/><rect x="22" y="22" width="16" height="58" rx="3" fill="#c9b3d3"/><rect x="44" y="6" width="16" height="74" rx="3" fill="#4b145b"/><rect x="66" y="28" width="16" height="52" rx="3" fill="#ff7900"/></g>
-    <path d="M110 168v38M150 168v38M90 206h80" stroke="#4b145b" stroke-width="2.5" stroke-linecap="round"/>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+  <g transform="translate(24 26)">
+    <rect width="232" height="248" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <rect width="232" height="44" rx="12" fill="#4b145b"/><rect y="30" width="232" height="14" fill="#4b145b"/>
+    <text x="18" y="28" font-size="12.5" font-weight="700" fill="#fff">Safeguarding training</text>
+    <g font-size="9.5" font-weight="600" fill="#8a7f93" letter-spacing=".05em"><text x="18" y="70">COURSE OUTLINE</text></g>
+    <g font-size="11.5" fill="#2b2433"><text x="44" y="98">Recognising concerns</text><text x="44" y="130">Reporting procedures</text><text x="44" y="162">Safer working practice</text><text x="44" y="194">Record keeping</text></g>
+    <g font-size="10" font-weight="700" fill="#ff7900"><text x="18" y="98">01</text><text x="18" y="130">02</text><text x="18" y="162">03</text><text x="18" y="194">04</text></g>
+    <rect x="18" y="212" width="140" height="20" rx="10" fill="#fff1e3"/><text x="88" y="226" font-size="9.5" font-weight="600" fill="#e56c00" text-anchor="middle">Certificate on completion</text>
   </g>
-  <g transform="translate(300 64)">
-    <rect width="150" height="200" rx="12" fill="#fff" stroke="#4b145b" stroke-width="2.5"/>
-    <text x="16" y="28" font-size="11" font-weight="700" fill="#4b145b">Attendance</text>
-    <path d="M16 40h118" stroke="#ece6f0" stroke-width="2"/>
-    <g fill="#d9d0df"><rect x="16" y="58" width="50" height="6" rx="3"/><rect x="16" y="94" width="42" height="6" rx="3"/><rect x="16" y="130" width="54" height="6" rx="3"/><rect x="16" y="166" width="46" height="6" rx="3"/></g>
-    <g fill="none" stroke="#4b145b" stroke-width="2" stroke-linecap="round">
-      <path class="sg" d="M80 64c6-10 10 6 16-2s8 4 16-4"/><path class="sg s2" d="M80 100c6-10 10 6 16-2s8 4 16-4"/><path class="sg s3" d="M80 136c6-10 10 6 16-2s8 4 16-4"/>
-    </g>
-    <path d="M80 172h44" stroke="#c9bfd1" stroke-width="1.5"/>
+  <g transform="translate(272 46)">
+    <rect width="184" height="208" rx="12" fill="#fff" stroke="#d9d0df" stroke-width="1.5"/>
+    <text x="16" y="30" font-size="13" font-weight="700" fill="#4b145b">Attendance</text>
+    <path d="M16 42h152" stroke="#ece6f0" stroke-width="1.5"/>
+    <g font-size="10.5" fill="#2b2433"><text x="16" y="72">Staff member 1</text><text x="16" y="108">Staff member 2</text><text x="16" y="144">Staff member 3</text><text x="16" y="180">Staff member 4</text></g>
+    <g fill="none" stroke="#ece6f0" stroke-width="1"><path d="M16 86h152M16 122h152M16 158h152"/></g>
+    <g fill="none" stroke="#ff7900" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="k" d="M148 68l4 4 7-8"/><path class="k k2" d="M148 104l4 4 7-8"/><path class="k k3" d="M148 140l4 4 7-8"/><path class="k k4" d="M148 176l4 4 7-8"/></g>
+  </g>
   </g>
 </svg>
