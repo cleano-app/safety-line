@@ -1,33 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of a school building with a safety shield">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of a school building">
   <style>
-    .flag{transform-origin:330px 52px;animation:wave 2.4s ease-in-out infinite}
-    .badge{transform-origin:388px 92px;animation:pop 3.2s ease-in-out infinite}
-    .cloud{animation:drift 14s linear infinite}
-    @keyframes wave{0%,100%{transform:skewY(0)}50%{transform:skewY(-8deg)}}
-    @keyframes pop{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-    @keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(520px)}}
-    @media (prefers-reduced-motion:reduce){.flag,.badge,.cloud{animation:none}}
+    .flag{transform-origin:332px 58px;animation:wave 2.6s ease-in-out infinite}
+    .sun{animation:pulse 5s ease-in-out infinite;transform-origin:404px 70px}
+    @keyframes wave{0%,100%{transform:skewY(0)}50%{transform:skewY(-7deg)}}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+    @media (prefers-reduced-motion:reduce){.flag,.sun{animation:none}}
   </style>
-  <rect width="480" height="300" fill="#13304d"/>
-  <circle cx="90" cy="70" r="120" fill="#1a3c5e" opacity=".6"/>
-  <g class="cloud" fill="#ffffff" opacity=".08"><ellipse cx="40" cy="60" rx="38" ry="12"/><ellipse cx="62" cy="52" rx="22" ry="12"/></g>
-  <rect x="0" y="252" width="480" height="48" fill="#0b1f33"/>
-  <g fill="#0f2740"><circle cx="70" cy="226" r="26"/><circle cx="96" cy="236" r="20"/><circle cx="410" cy="230" r="24"/><circle cx="436" cy="240" r="16"/></g>
-  <rect x="80" y="236" width="4" height="18" fill="#0b1f33"/><rect x="418" y="238" width="4" height="16" fill="#0b1f33"/>
-  <polygon points="120,120 240,62 360,120" fill="#b08d57"/>
-  <polygon points="140,118 240,72 340,118" fill="#c9a66d"/>
-  <circle cx="240" cy="100" r="13" fill="#f6f1e7"/><path d="M240 92v8l5 4" stroke="#13304d" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <rect x="128" y="120" width="224" height="134" fill="#f6f1e7"/>
-  <rect x="128" y="120" width="224" height="10" fill="#e3d8c3"/>
-  <g fill="#13304d"><rect x="146" y="146" width="26" height="30" rx="2"/><rect x="186" y="146" width="26" height="30" rx="2"/><rect x="268" y="146" width="26" height="30" rx="2"/><rect x="308" y="146" width="26" height="30" rx="2"/>
-  <rect x="146" y="196" width="26" height="30" rx="2"/><rect x="308" y="196" width="26" height="30" rx="2"/></g>
-  <g fill="#d6b77f" opacity=".85"><rect x="149" y="149" width="9" height="11"/><rect x="311" y="199" width="9" height="11"/><rect x="271" y="149" width="9" height="11"/></g>
-  <path d="M220 254v-46a20 20 0 0 1 40 0v46z" fill="#0b1f33"/>
-  <rect x="200" y="250" width="80" height="6" fill="#e3d8c3"/>
-  <rect x="328" y="44" width="3" height="78" fill="#e3d8c3"/>
-  <path class="flag" d="M331 46h34l-7 9 7 9h-34z" fill="#d6b77f"/>
-  <g class="badge">
-    <path d="M388 62l26 10v18c0 17-11 29-26 33-15-4-26-16-26-33V72z" fill="#0b1f33" stroke="#d6b77f" stroke-width="3"/>
-    <path d="M376 92l8 8 16-17" fill="none" stroke="#d6b77f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="480" height="300" fill="#f4eef6"/>
+  <circle class="sun" cx="404" cy="70" r="26" fill="#ffe2c7"/>
+  <path d="M30 300C30 220 90 160 190 160h60c0 80-60 140-160 140z" fill="#ece2f0"/>
+  <rect x="0" y="252" width="480" height="48" fill="#e7dcec"/>
+  <g fill="none" stroke="#4b145b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M118 122 240 64l122 58"/>
+    <rect x="132" y="122" width="216" height="130" fill="#ffffff"/>
+    <circle cx="240" cy="100" r="13" fill="#ffffff"/><path d="M240 92v8l5 4"/>
+    <rect x="152" y="146" width="28" height="30" rx="3"/><rect x="194" y="146" width="28" height="30" rx="3"/>
+    <rect x="258" y="146" width="28" height="30" rx="3"/><rect x="300" y="146" width="28" height="30" rx="3"/>
+    <rect x="152" y="198" width="28" height="30" rx="3"/><rect x="300" y="198" width="28" height="30" rx="3"/>
+    <path d="M220 252v-42a20 20 0 0 1 40 0v42"/>
+    <path d="M330 60v62"/>
+    <path d="M60 252c0-30 14-46 26-46s26 16 26 46M86 252v-26"/>
+    <path d="M384 252c0-24 11-38 21-38s21 14 21 38M405 252v-20"/>
+    <path d="M10 252h460"/>
   </g>
+  <path d="M222 252v-42a18 18 0 0 1 36 0v42z" fill="#ff7900" opacity=".9"/>
+  <path class="flag" d="M332 58h34l-8 9 8 9h-34z" fill="#ff7900"/>
 </svg>
