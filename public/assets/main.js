@@ -1,3 +1,4 @@
+document.documentElement.classList.add("js");
 // Mobile menu
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("nav");
@@ -49,4 +50,27 @@ if (form) {
       button.textContent = label;
     }
   });
+}
+
+// Reveal sections as they scroll into view, draw the timeline, count up facts
+const io = "IntersectionObserver" in window ? new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (!e.isIntersecting) continue;
+    e.target.classList.add("in");
+    if (e.target.matches("[data-count]")) countUp(e.target);
+    io.unobserve(e.target);
+  }
+}, { threshold: 0.15 }) : null;
+document.querySelectorAll(".reveal, .timeline, [data-count]").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
+
+function countUp(el) {
+  const target = Number(el.dataset.count);
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = target; return; }
+  const start = performance.now(), dur = 1200;
+  const tick = (t) => {
+    const p = Math.min(1, (t - start) / dur);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
 }

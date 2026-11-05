@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Illustration of certificates with an approval seal">
+  <style>
+    .seal{transform-origin:318px 196px;animation:spin 18s linear infinite}
+    .back{animation:bob 4s ease-in-out infinite}
+    .tick{stroke-dasharray:60;stroke-dashoffset:60;animation:draw 3.5s ease-in-out infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes draw{0%,15%{stroke-dashoffset:60}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:60}}
+    @media (prefers-reduced-motion:reduce){.seal,.back,.tick{animation:none;stroke-dashoffset:0}}
+  </style>
+  <rect width="480" height="300" fill="#13304d"/>
+  <circle cx="400" cy="40" r="130" fill="#1a3c5e" opacity=".6"/>
+  <g class="back"><rect x="96" y="44" width="200" height="226" rx="6" fill="#e3d8c3" transform="rotate(-8 196 157)"/></g>
+  <rect x="150" y="34" width="210" height="236" rx="6" fill="#f6f1e7"/>
+  <rect x="150" y="34" width="210" height="40" rx="6" fill="#0b1f33"/>
+  <rect x="150" y="62" width="210" height="12" fill="#0b1f33"/>
+  <rect x="170" y="48" width="96" height="8" rx="4" fill="#d6b77f"/>
+  <g fill="#cfc3ab"><rect x="170" y="96" width="170" height="7" rx="3.5"/><rect x="170" y="114" width="150" height="7" rx="3.5"/><rect x="170" y="132" width="160" height="7" rx="3.5"/><rect x="170" y="150" width="110" height="7" rx="3.5"/></g>
+  <rect x="170" y="236" width="80" height="3" fill="#13304d"/>
+  <path class="tick" d="M178 190l14 14 28-30" fill="none" stroke="#0b1f33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g class="seal">
+    <circle cx="318" cy="196" r="38" fill="#b08d57"/>
+    <circle cx="318" cy="196" r="29" fill="none" stroke="#f6f1e7" stroke-width="2" stroke-dasharray="4 5"/>
+  </g>
+  <circle cx="318" cy="196" r="19" fill="#c9a66d"/>
+  <path d="M309 196l6 6 12-13" fill="none" stroke="#0b1f33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M302 228l-10 36 16-8 10 14 8-38z" fill="#9b7845"/><path d="M334 228l10 36-16-8-10 14-8-38z" fill="#b08d57"/>
+</svg>
