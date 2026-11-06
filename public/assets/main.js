@@ -89,6 +89,8 @@ const AUDIENCES = {
     lead: "We find the gaps. We fix them. <strong>You pass the inspection.</strong>",
     art: "/images/ill-education.svg",
     service: "inspection",
+    label: "school", page: "/schools", pageLabel: "See school services",
+    links: [["/schools#registration", "Ofsted & DfE registration"], ["/schools#inspections", "Mock inspections"], ["/schools#compliance", "SCR & safer recruitment"]],
     questions: [
       ["Is your Single Central Record complete and up to date for every member of staff?", "Single Central Record has gaps"],
       ["Is safeguarding training up to date for all staff?", "Safeguarding training needs updating"],
@@ -101,6 +103,8 @@ const AUDIENCES = {
     lead: "We find the gaps. We fix them. <strong>Every certificate stays in date.</strong>",
     art: "/images/ill-certificates.svg",
     service: "property",
+    label: "landlord", page: "/certificates", pageLabel: "See landlord services",
+    links: [["/certificates", "Gas safety & EICR"], ["/business#property", "Fire safety works"], ["/certificates", "Expiry tracking"]],
     questions: [
       ["Do you have a current gas safety record for every property with gas appliances?", "Gas safety record missing or out of date"],
       ["Does every rental have an electrical report (EICR) from the last 5 years?", "EICR missing or out of date"],
@@ -113,6 +117,8 @@ const AUDIENCES = {
     lead: "We find the gaps. We fix them. <strong>Your team works safely.</strong>",
     art: "/images/ill-business.svg",
     service: "business",
+    label: "business", page: "/business", pageLabel: "See business services",
+    links: [["/business#premises", "Workplace risk assessments"], ["/business#teams", "High-risk teams"], ["/business#contracts", "Contracts & training"]],
     questions: [
       ["Do you have a written fire risk assessment that's been reviewed recently?", "Fire risk assessment needs a review"],
       ["Have you assessed the main hazards of your work and shared them with your staff?", "Workplace risk assessments are missing"],
@@ -133,6 +139,13 @@ function setWho(next, { scroll } = {}) {
   document.querySelectorAll(".who-tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.who === who)));
   const a = AUDIENCES[who];
   if (heroLead) heroLead.innerHTML = a.lead;
+  const chk = document.querySelector("[data-who-check]"), pg = document.querySelector("[data-who-page]"), lk = document.querySelector("[data-who-links]");
+  if (chk) chk.innerHTML = `Take the ${a.label} check <span class="arrow">→</span>`;
+  if (pg) { pg.href = a.page; pg.textContent = a.pageLabel; }
+  if (lk) {
+    lk.replaceChildren(...a.links.map(([href, text]) => { const el = document.createElement("a"); el.href = href; el.textContent = text; return el; }));
+    lk.classList.remove("pop"); void lk.offsetWidth; lk.classList.add("pop");
+  }
   if (heroArt) { heroArt.style.opacity = 0; setTimeout(() => { heroArt.src = a.art; heroArt.style.opacity = 1; }, 180); }
   startQuiz();
   if (scroll) document.getElementById("check")?.scrollIntoView({ behavior: "smooth" });
@@ -181,7 +194,10 @@ function startQuiz() {
 }
 
 document.querySelectorAll(".who-tab").forEach((t) => t.addEventListener("click", () => setWho(t.dataset.who)));
-if (quizBox) startQuiz();
+// ?who=landlord#check (from other pages) preselects the audience
+const whoParam = new URLSearchParams(location.search).get("who");
+if (whoParam && AUDIENCES[whoParam]) setWho(whoParam);
+else if (quizBox) startQuiz();
 
 // Contact form: carry the check's gaps into the message box
 const gapsParam = new URLSearchParams(location.search).get("gaps");

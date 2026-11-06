@@ -498,3 +498,86 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .nav .nav-phone { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; color: var(--purple); margin-left: 6px; white-space: nowrap; }
 .nav .nav-phone svg { width: 17px; height: 17px; color: var(--orange); }
 @media (max-width: 1120px) and (min-width: 961px) { .nav a { padding: 8px 10px; } }
+
+/* =========================================================
+   Lively inner pages
+   ========================================================= */
+.page-hero h1 { font-weight: 800; font-size: clamp(2.4rem, 5.4vw, 4.2rem); line-height: 1.03; letter-spacing: -.03em; }
+.page-hero h1 .hl { color: var(--orange); position: relative; display: inline-block; }
+.page-hero h1 .hl::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -.1em; height: .2em; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M2 15C80 3 200 1 298 8' fill='none' stroke='%234b145b' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat; transform-origin: left; animation: swoosh .9s .4s cubic-bezier(.2,.7,.2,1) both; }
+.page-hero p { color: var(--text); font-size: 1.2rem; }
+.page-hero p strong { color: var(--purple); }
+.page-hero .eyebrow, .page-hero h1, .page-hero p { animation: fadeUp .8s cubic-bezier(.2,.7,.2,1) both; }
+.page-hero h1 { animation-delay: .06s; } .page-hero p { animation-delay: .14s; }
+.page-hero.has-art .art { animation: fadeIn 1s .15s both; }
+
+/* Filled leaf icons everywhere (tiles, cards) */
+.tile .icon, .card .icon { width: 52px; height: 52px; border: 0; background: var(--purple); color: #fff; border-radius: 18px 5px 18px 5px; }
+.tile:nth-child(even) .icon, .card:nth-child(even) .icon { background: var(--orange); }
+
+/* Service cards (education) */
+.svc-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.svc { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--leaf); padding: 30px 26px 26px; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s, border-radius .35s; scroll-margin-top: 96px; }
+.svc:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(46,11,56,.10); border-top-left-radius: 44px; border-bottom-right-radius: 44px; }
+.svc .jnum { top: 6px; }
+.svc h3 { font-size: 1.45rem; font-weight: 700; margin-bottom: 4px; }
+.svc .punch { color: var(--purple-2); font-weight: 600; margin: 0 0 18px; }
+.svc .list-check { margin-bottom: 22px; font-size: .96rem; }
+.svc .btn { margin-top: auto; align-self: flex-start; }
+.svc:nth-child(2) .jicon { background: var(--orange); }
+@media (max-width: 960px) { .svc-cards { grid-template-columns: 1fr; } }
+
+/* "Take the check" banner */
+.check-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; background: var(--purple-tint); border-radius: 36px 8px 36px 8px; padding: 30px 36px; position: relative; overflow: hidden; }
+.check-cta::after { content: ""; position: absolute; right: 18%; top: -40px; width: 160px; height: 230px; background: url('/images/flame-tint.svg') center/contain no-repeat; opacity: 1; pointer-events: none; }
+.check-cta > * { position: relative; z-index: 1; }
+.check-cta h3 { font-size: 1.5rem; font-weight: 800; margin: 0 0 4px; }
+.check-cta p { margin: 0; color: var(--muted); }
+.check-cta .score { display: inline-grid; place-items: center; width: 64px; height: 64px; background: #fff; color: var(--purple); border-radius: 20px 5px 20px 5px; font-family: var(--head); font-weight: 800; font-size: 1.3rem; margin-right: 18px; box-shadow: var(--shadow); flex: none; }
+.check-cta .lhs { display: flex; align-items: center; }
+@media (max-width: 600px) { .check-cta { padding: 24px 20px; } .check-cta .score { display: none; } .check-cta .btn { width: 100%; } }
+
+/* Certificate chips with leaves */
+.chips span { display: inline-flex; align-items: center; gap: 8px; transition: background .2s, color .2s, transform .2s, border-color .2s; border-radius: 14px 4px 14px 4px; }
+.chips span::before { content: ""; width: 10px; height: 13px; background: url('/images/leaf-o.svg') center/contain no-repeat; }
+.chips span:hover { background: var(--purple); color: #fff; border-color: var(--purple); transform: translateY(-2px); }
+
+/* About: big statement + value cards */
+.statement-big { font-family: var(--head); font-weight: 800; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.12; color: var(--purple); letter-spacing: -.02em; max-width: 22ch; margin: 0; }
+.statement-big .hl { color: var(--orange); }
+.values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.value { background: #fff; border: 1px solid var(--line); border-radius: var(--leaf); padding: 26px 22px; transition: transform .25s, box-shadow .25s; }
+.value:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(46,11,56,.10); }
+.value h3 { margin: 0 0 4px; font-size: 1.15rem; }
+.value p { margin: 0; color: var(--muted); font-size: .95rem; }
+.value:nth-child(even) .jicon { background: var(--orange); }
+@media (max-width: 900px) { .values { grid-template-columns: 1fr 1fr; gap: 14px; } }
+@media (max-width: 600px) { .value { padding: 18px 16px; } .value .jicon { width: 42px; height: 42px; } }
+
+/* Contact: quick cards + next steps */
+.quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 40px; }
+.quick a, .quick div.q { display: flex; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: var(--leaf); padding: 20px; text-decoration: none; color: var(--text); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.quick a:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(46,11,56,.10); border-color: var(--line-strong); color: var(--text); }
+.quick .jicon { margin: 0; flex: none; }
+.quick strong { display: block; color: var(--purple); font-family: var(--head); font-size: 1.05rem; }
+.quick span.s { font-size: .92rem; color: var(--muted); }
+.quick > :nth-child(2) .jicon { background: var(--orange); }
+@media (max-width: 860px) { .quick { grid-template-columns: 1fr; gap: 10px; } }
+.next { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.next li { display: flex; gap: 14px; align-items: flex-start; }
+.next b { flex: none; width: 34px; height: 34px; display: grid; place-items: center; background: var(--purple-tint); color: var(--purple); font-family: var(--head); border-radius: 12px 3px 12px 3px; }
+.next strong { display: block; color: var(--purple); }
+.next span { color: var(--muted); font-size: .95rem; }
+/* Hero: per-audience quick links */
+.who-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.who-links a { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 600; color: var(--purple); text-decoration: none; background: #fff; border: 1px solid var(--line-strong); padding: 8px 14px; border-radius: 14px 4px 14px 4px; transition: background .2s, color .2s, border-color .2s; }
+.who-links a::before { content: ""; width: 9px; height: 12px; background: url('/images/leaf-o.svg') center/contain no-repeat; }
+.who-links a:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+.who-links.pop a { animation: fadeUp .45s cubic-bezier(.2,.7,.2,1) both; }
+.who-links.pop a:nth-child(2) { animation-delay: .06s; } .who-links.pop a:nth-child(3) { animation-delay: .12s; }
+.hero .actions { margin-top: 24px; }
+.who-tab { transition: background .25s, color .25s, box-shadow .25s, transform .15s; }
+.who-tab:active { transform: scale(.97); }
+.how { padding: 64px 0 24px; }
+.how .section-head { margin-bottom: 28px; }
+@media (max-width: 700px) { .how { padding: 44px 0 8px; } }
