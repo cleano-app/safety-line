@@ -287,3 +287,12 @@ document.querySelectorAll("[data-swipe]").forEach((row) => {
   };
   type.addEventListener("change", run); date.addEventListener("input", run); date.addEventListener("change", run);
 })();
+
+// Business: sector picker
+document.querySelectorAll(".sector").forEach((box) => {
+  const tabs = box.querySelectorAll(".sector-tab"), panels = box.querySelectorAll(".sector-panel");
+  tabs.forEach((t) => t.addEventListener("click", () => {
+    tabs.forEach((x) => x.setAttribute("aria-selected", String(x === t)));
+    panels.forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.sector));
+  }));
+});

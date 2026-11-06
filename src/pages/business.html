@@ -10,10 +10,54 @@
       </div>
     </section>
 
-    <section>
+    <section class="sector-wrap">
       <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Your business</span>
+          <h2>What does your business need?</h2>
+          <p>Pick your type of business. Here's what we'd check first.</p>
+        </div>
+        <div class="sector reveal">
+          <div class="sector-tabs" role="tablist" aria-label="Type of business">
+            <button type="button" role="tab" class="sector-tab" data-sector="0" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-2 6 0 8v10"/></svg><span>Restaurant / kitchen</span></button>
+            <button type="button" role="tab" class="sector-tab" data-sector="1" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5-5h-15z"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg><span>Shop</span></button>
+            <button type="button" role="tab" class="sector-tab" data-sector="2" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg><span>Office</span></button>
+            <button type="button" role="tab" class="sector-tab" data-sector="3" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20"/><path d="M4 18V9a8 8 0 0 1 16 0v9"/><path d="M12 4v5"/></svg><span>Construction / trades</span></button>
+            <button type="button" role="tab" class="sector-tab" data-sector="4" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg><span>Landlord / property</span></button>
+          </div>
+          <div class="sector-panel" data-panel="0">
+            <ul><li>Fire risk assessment</li><li>Gas safety for commercial appliances</li><li>Kitchen and equipment risk assessments</li><li>Food area safe working</li><li>Staff training records</li></ul>
+            <a class="btn btn-primary" href="/contact?service=business">Book a review for my restaurant <span class="arrow">→</span></a>
+          </div>
+          <div class="sector-panel" data-panel="1" hidden>
+            <ul><li>Fire risk assessment</li><li>Workplace risk assessment</li><li>PAT testing</li><li>Emergency lighting</li><li>Employers’ liability insurance</li></ul>
+            <a class="btn btn-primary" href="/contact?service=business">Book a review for my shop <span class="arrow">→</span></a>
+          </div>
+          <div class="sector-panel" data-panel="2" hidden>
+            <ul><li>Fire risk assessment</li><li>Workplace risk assessment</li><li>First aid arrangements</li><li>PAT testing</li><li>Fire alarm servicing</li></ul>
+            <a class="btn btn-primary" href="/contact?service=business">Book a review for my office <span class="arrow">→</span></a>
+          </div>
+          <div class="sector-panel" data-panel="3" hidden>
+            <ul><li>Risk assessments and method statements</li><li>Working at height</li><li>Manual handling training</li><li>Contracts setting out safety duties</li><li>Training and equipment records</li></ul>
+            <a class="btn btn-primary" href="/contact?service=business">Book a review for my site <span class="arrow">→</span></a>
+          </div>
+          <div class="sector-panel" data-panel="4" hidden>
+            <ul><li>Gas safety records</li><li>EICR</li><li>Fire alarm and emergency lighting</li><li>Fire doors and fire stopping</li><li>Council letters dealt with</li></ul>
+            <a class="btn btn-primary" href="/contact?service=property">Book a review for my properties <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we do</span>
+          <h2>Four ways we keep you compliant</h2>
+        </div>
         <div class="tiles">
           <div class="tile reveal" id="property">
+            <span class="jnum" aria-hidden="true">01</span>
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg></div>
             <h3>Property</h3>
             <p>Landlords and managing agents: houses, HMOs and blocks of flats.</p>
@@ -25,6 +69,7 @@
             </ul>
           </div>
           <div class="tile reveal d1" id="premises">
+            <span class="jnum" aria-hidden="true">02</span>
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5-5h-15z"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></div>
             <h3>Premises</h3>
             <p>Shops, restaurants, kitchens and offices.</p>
@@ -35,6 +80,7 @@
             </ul>
           </div>
           <div class="tile reveal" id="teams">
+            <span class="jnum" aria-hidden="true">03</span>
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20"/><path d="M4 18V9a8 8 0 0 1 16 0v9"/><path d="M12 4v5"/></svg></div>
             <h3>High-risk teams</h3>
             <p>Scaffolding, access equipment, air-con, construction and deliveries.</p>
@@ -45,6 +91,7 @@
             </ul>
           </div>
           <div class="tile reveal d1" id="contracts">
+            <span class="jnum" aria-hidden="true">04</span>
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
             <h3>Contracts</h3>
             <p>Clear rules on paper, fewer disputes in practice.</p>
