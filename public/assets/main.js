@@ -57,16 +57,15 @@ const io = "IntersectionObserver" in window ? new IntersectionObserver((entries)
   for (const e of entries) {
     if (!e.isIntersecting) continue;
     e.target.classList.add("in");
-    if (e.target.matches("[data-count]")) countUp(e.target);
     io.unobserve(e.target);
   }
 }, { threshold: 0.15 }) : null;
-document.querySelectorAll(".reveal, .timeline, [data-count]").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
+document.querySelectorAll(".reveal, .timeline").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
 
 function countUp(el) {
   const target = Number(el.dataset.count);
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = target; return; }
-  const start = performance.now(), dur = 1200;
+  el.textContent = 0; const start = performance.now(), dur = 1400;
   const tick = (t) => {
     const p = Math.min(1, (t - start) / dur);
     el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
@@ -323,4 +322,16 @@ document.querySelectorAll(".sector").forEach((box) => {
     setTimeout(step, c === "," || c === "." ? 260 : c === " " ? 70 : 45 + Math.random() * 35);
   };
   setTimeout(step, 350);
+})();
+
+// Count-up figures: replay every time they come into view, and every 7s while visible
+(() => {
+  const nums = document.querySelectorAll("[data-count]");
+  if (!nums.length || !("IntersectionObserver" in window)) return;
+  const timers = new Map();
+  const obsCount = new IntersectionObserver((entries) => entries.forEach((e) => {
+    clearInterval(timers.get(e.target));
+    if (e.isIntersecting) { countUp(e.target); timers.set(e.target, setInterval(() => countUp(e.target), 7000)); }
+  }), { threshold: 0.4 });
+  nums.forEach((n) => obsCount.observe(n));
 })();
