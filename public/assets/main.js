@@ -86,7 +86,7 @@ if (mcta) {
 // ---------- "Who are you?" tabs + 60-second inspection-ready check ----------
 const AUDIENCES = {
   education: {
-    lead: "Registered, inspection-ready and compliant. We find what's missing, put it right and take the headache off you.",
+    lead: "We find the gaps. We fix them. <strong>You pass the inspection.</strong>",
     art: "/images/ill-education.svg",
     service: "inspection",
     questions: [
@@ -98,7 +98,7 @@ const AUDIENCES = {
     ],
   },
   landlord: {
-    lead: "Every certificate booked, tracked and renewed on time. We find what's missing, put it right and take the headache off you.",
+    lead: "We find the gaps. We fix them. <strong>Every certificate stays in date.</strong>",
     art: "/images/ill-certificates.svg",
     service: "property",
     questions: [
@@ -110,7 +110,7 @@ const AUDIENCES = {
     ],
   },
   business: {
-    lead: "Safe premises, trained teams and clear contracts. We find what's missing, put it right and take the headache off you.",
+    lead: "We find the gaps. We fix them. <strong>Your team works safely.</strong>",
     art: "/images/ill-business.svg",
     service: "business",
     questions: [
@@ -132,7 +132,7 @@ function setWho(next, { scroll } = {}) {
   who = next;
   document.querySelectorAll(".who-tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.who === who)));
   const a = AUDIENCES[who];
-  if (heroLead) heroLead.textContent = a.lead;
+  if (heroLead) heroLead.innerHTML = a.lead;
   if (heroArt) { heroArt.style.opacity = 0; setTimeout(() => { heroArt.src = a.art; heroArt.style.opacity = 1; }, 180); }
   startQuiz();
   if (scroll) document.getElementById("check")?.scrollIntoView({ behavior: "smooth" });

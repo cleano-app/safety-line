@@ -486,3 +486,12 @@ details p { margin: 12px 0 0; color: var(--muted); }
   .jstep p { font-size: .86rem; margin-bottom: 10px; }
   .jtag { font-size: .7rem; padding: 4px 8px; }
 }
+
+/* Hero headline: heavier, bigger, grabs attention first */
+.hero-title { font-weight: 800; font-size: clamp(2.6rem, 6.2vw, 4.9rem); line-height: 1.02; letter-spacing: -.035em; max-width: 12ch; }
+.hero-title .hl { position: relative; display: inline-block; white-space: nowrap; }
+.hero-title .hl::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -.1em; height: .2em; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M2 15C80 3 200 1 298 8' fill='none' stroke='%234b145b' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat; transform-origin: left; animation: swoosh .9s .5s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes swoosh { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+.hero .lead { font-size: 1.3rem; color: var(--text); min-height: 0; margin-top: 18px; }
+.hero .lead strong { color: var(--purple); font-weight: 700; }
+@media (max-width: 600px) { .hero-title { font-size: 2.65rem; } .hero-title .hl { white-space: normal; } .hero .lead { font-size: 1.12rem; } }
