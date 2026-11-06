@@ -262,3 +262,28 @@ document.querySelectorAll("[data-swipe]").forEach((row) => {
     dots.forEach((d, i) => d.classList.toggle("on", i === best));
   }, { passive: true });
 });
+
+// Certificates: renewal date checker
+(() => {
+  const type = document.getElementById("calc-type"), date = document.getElementById("calc-date");
+  if (!type || !date) return;
+  const ring = document.querySelector("[data-calc-ring]"), days = document.querySelector("[data-calc-days]"),
+    unit = document.querySelector("[data-calc-unit]"), due = document.querySelector("[data-calc-due]"), status = document.querySelector("[data-calc-status]");
+  date.max = new Date().toISOString().slice(0, 10);
+  const run = () => {
+    if (!date.value) return;
+    const months = Number(type.value), last = new Date(date.value + "T12:00:00");
+    const next = new Date(last); next.setMonth(next.getMonth() + months);
+    const today = new Date(); today.setHours(12, 0, 0, 0);
+    const left = Math.round((next - today) / 86400000), total = Math.round((next - last) / 86400000);
+    const cls = left < 0 ? "over" : left <= 60 ? "soon" : "ok";
+    const frac = Math.max(0, Math.min(1, left / total));
+    ring.className = "calc-ring " + cls; ring.style.setProperty("--deg", Math.round(frac * 360) + "deg");
+    days.textContent = Math.abs(left).toLocaleString("en-GB");
+    unit.textContent = left < 0 ? (Math.abs(left) === 1 ? "day overdue" : "days overdue") : (left === 1 ? "day left" : "days left");
+    due.textContent = (left < 0 ? "Was due " : "Due ") + next.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+    status.className = "calc-status " + cls;
+    status.textContent = cls === "over" ? "Overdue: book it now" : cls === "soon" ? "Due soon: time to book" : "In date";
+  };
+  type.addEventListener("change", run); date.addEventListener("input", run); date.addEventListener("change", run);
+})();

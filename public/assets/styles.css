@@ -649,3 +649,43 @@ details p { margin: 12px 0 0; color: var(--muted); }
   .check { padding: 28px 14px; }
   .check-box { padding: 20px 16px; }
 }
+
+/* Bigger step numbers */
+.jnum { font-size: 6.2rem; right: 12px; top: -6px; -webkit-text-stroke: 2px #f3c9a6; letter-spacing: -.04em; }
+@media (max-width: 600px) { .jnum { font-size: 4.4rem; right: 6px; top: -4px; } }
+
+/* ---------- Certificates: tiles ---------- */
+.certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.cert { display: flex; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 22px 5px 22px 5px; padding: 16px; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.cert:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(46,11,56,.09); border-color: var(--line-strong); }
+.cert-ico { flex: none; width: 46px; height: 46px; display: grid; place-items: center; background: var(--purple-tint); color: var(--purple); border-radius: 16px 4px 16px 4px; transition: background .2s, color .2s; }
+.cert:hover .cert-ico { background: var(--purple); color: #fff; }
+.cert:nth-child(3n+2) .cert-ico { background: #fff1e3; color: var(--orange-dark); }
+.cert:nth-child(3n+2):hover .cert-ico { background: var(--orange); color: #fff; }
+.cert-ico svg { width: 22px; height: 22px; }
+.cert strong { display: block; color: var(--purple); font-size: .98rem; line-height: 1.25; }
+.cert span:not(.cert-ico) { display: inline-block; margin-top: 4px; font-size: .78rem; font-weight: 600; color: var(--orange-dark); }
+@media (max-width: 600px) { .certs { grid-template-columns: 1fr 1fr; gap: 10px; } .cert { flex-direction: column; align-items: flex-start; padding: 14px; gap: 10px; } .cert strong { font-size: .9rem; } }
+
+/* ---------- Certificates: renewal checker ---------- */
+.calc-wrap { padding: 24px 0 72px; }
+.calc { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 44px 10px 44px 10px; overflow: hidden; box-shadow: 0 24px 60px rgba(46,11,56,.12); }
+.calc-intro { background: var(--purple); color: #e9dcee; padding: 44px; position: relative; overflow: hidden; }
+.calc-intro::after { content: ""; position: absolute; right: -60px; bottom: -110px; width: 260px; height: 370px; background: url('/images/flame-white.svg') center/contain no-repeat; opacity: .07; }
+.calc-intro h2 { color: #fff; } .calc-intro .eyebrow { color: #e9dcee; } .calc-intro p { color: #e9dcee; }
+.calc-form { display: grid; gap: 8px; margin-top: 18px; position: relative; z-index: 1; }
+.calc-form label { color: #fff; margin: 6px 0 0; }
+.calc-form select, .calc-form input { border: 0; padding: 13px 14px; font-size: 1rem; border-radius: 12px 3px 12px 3px; }
+.calc-out { background: #fff; padding: 40px; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; gap: 10px; }
+.calc-ring { --c: var(--line-strong); width: 190px; height: 190px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--c) var(--deg), var(--purple-tint) 0); transition: background .4s; }
+.calc-ring > div { width: 156px; height: 156px; border-radius: 50%; background: #fff; display: grid; place-content: center; }
+.calc-ring strong { font-family: var(--head); font-weight: 800; font-size: 3.4rem; line-height: 1; color: var(--purple); }
+.calc-ring span { font-size: .85rem; color: var(--muted); font-weight: 600; }
+.calc-ring.ok { --c: #1f8a4c; } .calc-ring.soon { --c: var(--orange); } .calc-ring.over { --c: #d9480f; }
+.calc-due { font-family: var(--head); font-size: 1.2rem; font-weight: 600; color: var(--purple); margin: 8px 0 0; }
+.calc-status { font-size: .8rem; font-weight: 700; padding: 5px 12px; border-radius: 12px 3px 12px 3px; }
+.calc-status:empty { display: none; }
+.calc-status.ok { background: #e7f5ec; color: #1f6b43; } .calc-status.soon { background: #fff1e3; color: #a85600; } .calc-status.over { background: #fde5d8; color: #b3410c; }
+.calc-out .btn { margin-top: 10px; }
+@media (max-width: 860px) { .calc { grid-template-columns: 1fr; border-radius: 30px 8px 30px 8px; } .calc-intro, .calc-out { padding: 28px 20px; } .calc-ring { width: 160px; height: 160px; } .calc-ring > div { width: 130px; height: 130px; } .calc-ring strong { font-size: 2.8rem; } }
+@media (max-width: 600px) { .jnum { font-size: 3.8rem; opacity: .9; } }
