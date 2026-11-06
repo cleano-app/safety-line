@@ -748,3 +748,21 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .svc-cards .svc:nth-child(2) .list-check li::before { border-color: #fff; }
 .svc-cards .svc:nth-child(2) .jnum { -webkit-text-stroke-color: rgba(255,255,255,.25); }
 .day::before { display: none; }
+
+/* Typewriter headline */
+.hero-title.typing .ch { opacity: 0; }
+.hero-title.typing .ch.on { opacity: 1; }
+.hero-title .ch.cur { position: relative; }
+.hero-title .ch.cur::after { content: ""; position: absolute; right: -.08em; top: .12em; bottom: .08em; width: .06em; background: var(--orange); animation: caret .9s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+/* Underline: waits for the typing, then draws slowly and repeats */
+.hero-title .hl::after { animation: none; transform: scaleX(0); }
+.hero-title.typed .hl::after { animation: swooshLoop 5.5s cubic-bezier(.45,.05,.25,1) .2s infinite; }
+@keyframes swooshLoop {
+  0% { transform: scaleX(0); opacity: 1; }
+  32% { transform: scaleX(1); opacity: 1; }
+  78% { transform: scaleX(1); opacity: 1; }
+  92% { transform: scaleX(1); opacity: 0; }
+  100% { transform: scaleX(0); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-title .hl::after { transform: none; } }

@@ -296,3 +296,31 @@ document.querySelectorAll(".sector").forEach((box) => {
     panels.forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.sector));
   }));
 });
+
+// Hero headline: typewriter effect, then a looping hand-drawn underline
+(() => {
+  const h = document.querySelector(".hero-title");
+  if (!h || matchMedia("(prefers-reduced-motion: reduce)").matches) { h?.classList.add("typed"); return; }
+  h.setAttribute("aria-label", h.textContent.replace(/\s+/g, " ").trim());
+  const chars = [];
+  const wrap = (node) => {
+    [...node.childNodes].forEach((n) => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        [...n.textContent].forEach((c) => { const s = document.createElement("span"); s.className = "ch"; s.textContent = c; s.setAttribute("aria-hidden", "true"); frag.appendChild(s); chars.push(s); });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) wrap(n);
+    });
+  };
+  wrap(h);
+  h.classList.add("typing");
+  let i = 0;
+  const step = () => {
+    if (i > 0) chars[i - 1].classList.remove("cur");
+    if (i >= chars.length) { chars[chars.length - 1].classList.add("cur"); h.classList.remove("typing"); h.classList.add("typed"); return; }
+    chars[i].classList.add("on", "cur");
+    const c = chars[i].textContent; i++;
+    setTimeout(step, c === "," || c === "." ? 260 : c === " " ? 70 : 45 + Math.random() * 35);
+  };
+  setTimeout(step, 350);
+})();
