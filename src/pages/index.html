@@ -2,12 +2,17 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Health &amp; safety compliance · London</span>
+          <div class="who" role="tablist" aria-label="Who are you?">
+            <span class="who-label">I'm a</span>
+            <button type="button" role="tab" class="who-tab" data-who="education" aria-selected="true">School / nursery</button>
+            <button type="button" role="tab" class="who-tab" data-who="landlord" aria-selected="false">Landlord</button>
+            <button type="button" role="tab" class="who-tab" data-who="business" aria-selected="false">Business</button>
+          </div>
           <h1>Legal compliance and safety, <span class="hl">handled properly.</span></h1>
-          <p class="lead">We find what's missing, put it right and take the headache off you.</p>
+          <p class="lead" data-lead>Registered, inspection-ready and compliant. We find what's missing, put it right and take the headache off you.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="/contact">Book a consultation <span class="arrow">→</span></a>
-            <a class="btn btn-outline" href="#services">Our services</a>
+            <a class="btn btn-primary" href="#check">Take the 60-second check <span class="arrow">→</span></a>
+            <a class="btn btn-outline" href="/contact">Book a consultation</a>
           </div>
         </div>
         <div class="hero-photo">
@@ -22,6 +27,26 @@
         <span>Ofsted registration</span><span>Mock inspections</span><span>Single Central Record</span><span>Safer recruitment</span><span>Fire risk assessments</span><span>Gas safety</span><span>EICR</span><span>PAT testing</span><span>Legionella</span><span>Emergency lighting</span><span>Safeguarding training</span><span>Paediatric first aid</span><span>Allergy training</span><span>Contracts</span><span>Liability insurance</span>
       </div>
     </div>
+
+    <section class="check-wrap" id="check">
+      <div class="container">
+        <div class="check">
+          <div class="check-intro">
+            <span class="eyebrow">60-second check</span>
+            <h2>Are you inspection-ready?</h2>
+            <p>Five quick questions. See where the gaps are, before an inspector or the council does.</p>
+            <div class="who who-light" role="tablist" aria-label="Check for">
+              <button type="button" role="tab" class="who-tab" data-who="education" aria-selected="true">School / nursery</button>
+              <button type="button" role="tab" class="who-tab" data-who="landlord" aria-selected="false">Landlord</button>
+              <button type="button" role="tab" class="who-tab" data-who="business" aria-selected="false">Business</button>
+            </div>
+          </div>
+          <div class="check-box" data-quiz>
+            <noscript><p>Turn on JavaScript to take the check, or <a href="/contact">contact us</a> for a free review.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="services">
       <div class="container">
