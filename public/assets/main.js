@@ -189,7 +189,12 @@ const msgBox = document.getElementById("message");
 if (gapsParam && msgBox && !msgBox.value) msgBox.value = `From the 60-second check, gaps found: ${gapsParam}.\n\n`;
 
 // Hide the sticky phone button while the check is on screen (it has its own buttons)
-const checkSec = document.getElementById("check");
-if (checkSec && mcta && "IntersectionObserver" in window) {
-  new IntersectionObserver(([e]) => mcta.classList.toggle("hide", e.isIntersecting), { threshold: 0.2 }).observe(checkSec);
+// ...and while any section with its own booking button is on screen
+if (mcta && "IntersectionObserver" in window) {
+  const covering = new Set();
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => (e.isIntersecting ? covering.add(e.target) : covering.delete(e.target)));
+    mcta.classList.toggle("hide", covering.size > 0);
+  }, { threshold: 0.15 });
+  document.querySelectorAll("#check, .cta, .site-footer, .hero").forEach((el) => obs.observe(el));
 }

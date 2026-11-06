@@ -459,3 +459,30 @@ details p { margin: 12px 0 0; color: var(--muted); }
   .q-result .q-answers .btn { width: 100%; }
 }
 .mobile-cta.hide { transform: translateY(140%) !important; }
+
+/* ---------- Journey (process steps as leaf cards) ---------- */
+.journey { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: j; }
+.jstep { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--leaf); padding: 26px 22px 22px; overflow: hidden; transition: transform .25s, box-shadow .25s, border-radius .35s; }
+.jstep:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(46,11,56,.10); border-top-left-radius: 44px; border-bottom-right-radius: 44px; }
+.jnum { position: absolute; right: 14px; top: 2px; font-family: var(--head); font-weight: 700; font-size: 4.2rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px #f1d9c6; pointer-events: none; }
+.jicon { width: 52px; height: 52px; display: grid; place-items: center; background: var(--purple); color: #fff; border-radius: 18px 5px 18px 5px; margin-bottom: 18px; position: relative; }
+.jicon svg { width: 24px; height: 24px; }
+.jstep:nth-child(even) .jicon { background: var(--orange); }
+.jstep h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.jstep p { color: var(--muted); margin: 0 0 14px; font-size: .95rem; }
+.jtag { display: inline-block; font-size: .78rem; font-weight: 600; color: var(--purple-2); background: var(--purple-tint); padding: 5px 11px; border-radius: 10px 3px 10px 3px; }
+/* arrows between cards */
+.jstep:not(:last-child)::after { content: ""; position: absolute; right: -17px; top: 50px; width: 12px; height: 12px; border-top: 2px solid var(--orange); border-right: 2px solid var(--orange); transform: rotate(45deg); z-index: 2; }
+.journey { position: relative; }
+.jstep { overflow: visible; }
+.jstep .jnum { overflow: hidden; }
+@media (max-width: 900px) { .journey { grid-template-columns: 1fr 1fr; gap: 14px; } .jstep:not(:last-child)::after { display: none; } }
+@media (max-width: 600px) {
+  .jstep { padding: 18px 14px 16px; border-radius: 22px 5px 22px 5px; }
+  .jnum { font-size: 3rem; right: 8px; }
+  .jicon { width: 42px; height: 42px; margin-bottom: 12px; border-radius: 14px 4px 14px 4px; }
+  .jicon svg { width: 20px; height: 20px; }
+  .jstep h3 { font-size: 1.02rem; }
+  .jstep p { font-size: .86rem; margin-bottom: 10px; }
+  .jtag { font-size: .7rem; padding: 4px 8px; }
+}
