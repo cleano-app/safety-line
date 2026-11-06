@@ -2,9 +2,10 @@
   "name": "SafetyLine",
   "domain": "https://safetyline.uk",
   "email": "info@safetyline.uk",
-  "phone": "",
-  "phoneHref": "",
+  "phone": "020 7946 0018",
+  "phoneHref": "+442079460018",
   "area": "London and surrounding areas",
   "companyNumber": "",
-  "address": ""
+  "address": "",
+  "_phoneNote": "PLACEHOLDER: Ofcom drama-range number (never assigned to anyone). Replace phone and phoneHref with the real number before promoting the site."
 }
